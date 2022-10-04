@@ -18,9 +18,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.layout {
+  max-width: 1440px;
+  margin: auto;
+  overflow-x: hidden;
+  box-shadow: 0px 18px 18px -4px rgba(73, 93, 207, 0.75);
 }
 
 h1 {
@@ -30,6 +32,19 @@ h1 {
   line-height: 40px;
   text-align: center;
   letter-spacing: -0.09375px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 52px;
+  text-align: center;
+  letter-spacing: -0.075px;
+  color: #242a45;
 }
 
 p {
@@ -55,20 +70,9 @@ button {
 }
 
 section {
+  max-width: 540px;
+  margin: 0 auto;
   margin-bottom: 72px;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 52px;
-  text-align: center;
-  letter-spacing: -0.075px;
-  color: #242a45;
 }
 
 li {
@@ -85,12 +89,13 @@ li {
 
 a {
   padding: 28px;
+  transition: all 0.3s ease;
 }
 a:hover {
   border-bottom: 4px solid #fa5959;
 }
 
-li svg path {
+.chevron path {
   color: #5267df;
   stroke-width: 4px;
 }
@@ -117,4 +122,7 @@ footer ul li {
   font-size: 15px;
   line-height: 17px;
   letter-spacing: 1.73077px;
+}
+
+@layer components {
 }
