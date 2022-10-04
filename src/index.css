@@ -1,13 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blue: #5267df;
+  --salmon: #fa5959;
+  --gray-dark: #242a45;
+  --gray-medium: #9194a2;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1 {
+  color: #242a45;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: -0.09375px;
+}
+
+p {
+  padding: 16px 32px;
+  font-size: 15px;
+  text-align: center;
+  line-height: 25px;
+  color: #242a45;
+  opacity: 0.5;
+}
+
+button {
+  padding: 10px 16px;
+  background-color: #5267df;
+  box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.20012);
+  border-radius: 5px;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 0.25px;
+}
+
+section {
+  margin-bottom: 72px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 52px;
+  text-align: center;
+  letter-spacing: -0.075px;
+  color: #242a45;
+}
+
+li {
+  width: 100%;
+  padding: 32px;
+  border-top: 1px solid rgba(73, 93, 207, 0.20012);
+  border-bottom: 1px solid rgba(73, 93, 207, 0.20012);
+  font-size: 16px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.533333px;
+  color: #242a45;
+}
+
+a {
+  padding: 28px;
+}
+a:hover {
+  border-bottom: 4px solid #fa5959;
+}
+
+li svg path {
+  color: #5267df;
+  stroke-width: 4px;
+}
+
+input {
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+input::placeholder {
+  color: #242a45;
+  opacity: 25%;
+  line-height: 28px;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+}
+
+footer ul li {
+  margin: 32px 0;
+  padding: 0;
+  border: none;
+  color: white;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 17px;
+  letter-spacing: 1.73077px;
 }
