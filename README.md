@@ -1,4 +1,5 @@
-# Frontend Mentor - Bookmark landing page solution
+# Bookmark landing page
+![bookmark-banner](https://user-images.githubusercontent.com/41050673/194343577-c34123f1-29d9-4579-bd5b-3adbc6cd80be.png)
 
 This is a solution to the [Bookmark landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0b588a9edda32581d29158).
 
@@ -10,9 +11,9 @@ This is a solution to the [Bookmark landing page challenge on Frontend Mentor](h
 - [Built with](#built-with)
 - [Author](#author)
 
-## Overview
-
 ## Screenshot
+
+https://user-images.githubusercontent.com/41050673/194343724-c38b17ee-e5f7-4cf4-b8c4-99a77a3174cc.mp4
 
 ## Links
 
