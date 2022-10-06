@@ -302,9 +302,9 @@ const Footer = () => {
             bookmark
           </span>
         </li>
-        <li><a href="#features">FEATURES</a></li>
-        <li> <a href="#download">DOWNLOAD</a> </li>
-        <li><a href="#contact">CONTACT</a></li>
+        <li><a target="_blank" href="#features">FEATURES</a></li>
+        <li> <a target="_blank" href="#download">DOWNLOAD</a> </li>
+        <li><a target="_blank" href="#contact">CONTACT</a></li>
         <li className="flex justify-center gap-[40px] ml-auto">
           <Icon className="text-white" icon="dashicons:facebook" width="25px" />
           <Icon
