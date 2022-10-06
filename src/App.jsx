@@ -51,7 +51,7 @@ const Navbar = () => {
         <img
           className="w-[25px] h-[25px]"
           src="images/icon-bookmark.png"
-          alt="bookmark"
+          alt="logo"
         />
         <span className="ml-[12px] uppercase text-xl tracking-widest">
           bookmark
@@ -82,7 +82,7 @@ const Overlay = () => {
       <img
         className="w-[48px] lg:w-[108px]"
         src="images/logo-3x.png"
-        alt="bookmark"
+        alt="logo"
       />
       <span className="ml-[16px] text-[32px] uppercase lg:text-[72px] tracking-widest">
         bookmark
@@ -300,7 +300,7 @@ const Footer = () => {
           <img
             className="w-[25px] h-[25px]"
             src="images/icon-bookmark.png"
-            alt="bookmark"
+            alt="logo"
           />
           <span className="ml-[12px] uppercase text-xl text-white tracking-widest">
             bookmark
