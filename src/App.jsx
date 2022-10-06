@@ -61,9 +61,9 @@ const Navbar = () => {
       </div>
       <Icon className="lg:hidden" icon="dashicons:menu-alt3" />
       <div className="hidden lg:flex items-center">
-        <a className="text-grayDark text-[13px] link">FEATURES</a>
-        <a className="text-grayDark text-[13px] link">DOWNLOAD</a>
-        <a className="text-grayDark text-[13px] link">CONTACT</a>
+        <a href="#features" className="text-grayDark text-[13px] link">FEATURES</a>
+        <a href="#download" className="text-grayDark text-[13px] link">DOWNLOAD</a>
+        <a href="#contact" className="text-grayDark text-[13px] link">CONTACT</a>
         <button className="w-[111px] h-[40px] bg-salmon text-[13px] link flex items-center justify-center">
           Login
         </button>
@@ -290,7 +290,6 @@ const ContactSection = () => {
 
 const Footer = () => {
   return (
-    // eslint-disable-next-line
     <footer className="w-full py-[40px] bg-[#242a45] flex">
       <ul className="max-w-[1200px] w-full mx-auto md:flex md:flex-row justify-center items-center">
         <li className="flex justify-center items-center mb-[40px] md:mb-0">
@@ -303,9 +302,9 @@ const Footer = () => {
             bookmark
           </span>
         </li>
-        <li><a href="/#features">FEATURES</a></li>
-        <li> <a href="/#download">DOWNLOAD</a> </li>
-        <li><a href="/#contact">CONTACT</a></li>
+        <li><a href="#features">FEATURES</a></li>
+        <li> <a href="#download">DOWNLOAD</a> </li>
+        <li><a href="#contact">CONTACT</a></li>
         <li className="flex justify-center gap-[40px] ml-auto">
           <Icon className="text-white" icon="dashicons:facebook" width="25px" />
           <Icon
