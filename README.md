@@ -15,8 +15,7 @@ This is a solution to the [Bookmark landing page challenge on Frontend Mentor](h
 
 https://user-images.githubusercontent.com/41050673/194343724-c38b17ee-e5f7-4cf4-b8c4-99a77a3174cc.mp4
 
-https://user-images.githubusercontent.com/41050673/194344259-b2204cf1-7cc1-42bd-b2c3-a5bb2fdbfa4d.mp4
-
+https://user-images.githubusercontent.com/41050673/194344482-7556b053-3127-4a1a-a429-e222eb84228a.mp4
 
 ## Links
 
