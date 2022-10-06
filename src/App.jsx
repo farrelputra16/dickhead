@@ -30,15 +30,17 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Overlay />
-      <div className="layout">
-        <HeroSection />
-        <FeaturesSection />
-        <BookmarkSection />
-        <DownloadSection />
-        <FaqSection />
-      </div>
-      <ContactSection />
+      <main>
+        <Overlay />
+        <div className="layout">
+          <HeroSection />
+          <FeaturesSection />
+          <BookmarkSection />
+          <DownloadSection />
+          <FaqSection />
+        </div>
+        <ContactSection />
+      </main>
       <Footer />
     </div>
   );
