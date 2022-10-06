@@ -61,15 +61,9 @@ const Navbar = () => {
       </div>
       <Icon className="lg:hidden" icon="dashicons:menu-alt3" />
       <div className="hidden lg:flex items-center">
-        <a className="text-grayDark text-[13px] link" href="#features">
-          FEATURES
-        </a>
-        <a className="text-grayDark text-[13px] link" href="#download">
-          DOWNLOAD
-        </a>
-        <a className="text-grayDark text-[13px] link" href="#contact">
-          CONTACT
-        </a>
+        <a className="text-grayDark text-[13px] link">FEATURES</a>
+        <a className="text-grayDark text-[13px] link">DOWNLOAD</a>
+        <a className="text-grayDark text-[13px] link">CONTACT</a>
         <button className="w-[111px] h-[40px] bg-salmon text-[13px] link flex items-center justify-center">
           Login
         </button>
@@ -130,7 +124,7 @@ const HeroSection = () => {
 
 const FeaturesSection = () => {
   return (
-    <section id="features">
+    <section>
       <h2>Features</h2>
       <p className="text-center ">
         Our aim is to make it quick and easy for you to access your favourite
@@ -181,7 +175,7 @@ const BookmarkSection = () => {
 const DownloadSection = () => {
   return (
     <>
-      <section id="download" className="mt-[77px]">
+      <section className="mt-[77px]">
         <h4 className="lg:mt-[150px]">Download the extension</h4>
         <p className="text-center">
           We’ve got more browsers in the pipeline. Please do let us know if
@@ -268,7 +262,7 @@ const FaqSection = () => {
 
 const ContactSection = () => {
   return (
-    <div id="contact" className="px-[32px] py-[60px] bg-blue">
+    <div className="px-[32px] py-[60px] bg-blue">
       <form className="max-w-[442px] mx-auto flex flex-col justify-center">
         <span className="font-medium tracking-[4.61539px] text-[12px] text-white text-center leading-[40px]">
           35,000+ ALREADY JOINED
