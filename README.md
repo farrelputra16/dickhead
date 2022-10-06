@@ -1,4 +1,5 @@
-# Frontend Mentor - Bookmark landing page solution
+# Bookmark landing page
+![bookmark-banner](https://user-images.githubusercontent.com/41050673/194343577-c34123f1-29d9-4579-bd5b-3adbc6cd80be.png)
 
 This is a solution to the [Bookmark landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0b588a9edda32581d29158).
 
@@ -10,14 +11,16 @@ This is a solution to the [Bookmark landing page challenge on Frontend Mentor](h
 - [Built with](#built-with)
 - [Author](#author)
 
-## Overview
-
 ## Screenshot
+
+https://user-images.githubusercontent.com/41050673/194343724-c38b17ee-e5f7-4cf4-b8c4-99a77a3174cc.mp4
+
+https://user-images.githubusercontent.com/41050673/194344482-7556b053-3127-4a1a-a429-e222eb84228a.mp4
 
 ## Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [frontendmentor.io/solutions/spline-3d-threejs-tailwindcss-gsap-i4ieJEj-E9](frontendmentor.io/solutions/spline-3d-threejs-tailwindcss-gsap-i4ieJEj-E9)
+- Live Site URL: [https://bookmark-landing-page-seanred.netlify.app/](https://bookmark-landing-page-seanred.netlify.app/)
 
 ## Built with
 
