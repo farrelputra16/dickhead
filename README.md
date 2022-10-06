@@ -19,8 +19,8 @@ https://user-images.githubusercontent.com/41050673/194344482-7556b053-3127-4a1a-
 
 ## Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [frontendmentor.io/solutions/spline-3d-threejs-tailwindcss-gsap-i4ieJEj-E9](frontendmentor.io/solutions/spline-3d-threejs-tailwindcss-gsap-i4ieJEj-E9)
+- Live Site URL: [https://bookmark-landing-page-seanred.netlify.app/](https://bookmark-landing-page-seanred.netlify.app/)
 
 ## Built with
 
