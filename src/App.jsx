@@ -290,6 +290,7 @@ const ContactSection = () => {
 
 const Footer = () => {
   return (
+    // eslint-disable-next-line
     <footer className="w-full py-[40px] bg-[#242a45] flex">
       <ul className="max-w-[1200px] w-full mx-auto md:flex md:flex-row justify-center items-center">
         <li className="flex justify-center items-center mb-[40px] md:mb-0">
