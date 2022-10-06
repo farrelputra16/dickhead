@@ -104,10 +104,6 @@ button {
   transition: all 0.3s ease;
 }
 
-button:hover {
-  opacity: 0.75;
-  transform: scale(1.1);
-}
 
 section {
   max-width: 540px;
