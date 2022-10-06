@@ -12,14 +12,14 @@ This is a solution to the [Bookmark landing page challenge on Frontend Mentor](h
 
 ## Overview
 
-### Screenshot
+## Screenshot
 
-### Links
+## Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-### Built with
+## Built with
 
 - ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 - ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
