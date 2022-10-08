@@ -19,7 +19,7 @@ https://user-images.githubusercontent.com/41050673/194344482-7556b053-3127-4a1a-
 
 ## Links
 
-- Solution URL: [https://frontendmentor.io/solutions/spline-3d-threejs-tailwindcss-gsap-i4ieJEj-E9](frontendmentor.io/solutions/spline-3d-threejs-tailwindcss-gsap-i4ieJEj-E9)
+- Solution URL: [https://www.frontendmentor.io/solutions/spline-3d-threejs-tailwindcss-gsap-i4ieJEj-E9](https://www.frontendmentor.io/solutions/spline-3d-threejs-tailwindcss-gsap-i4ieJEj-E9)
 - Live Site URL: [https://bookmark-landing-page-seanred.netlify.app/](https://bookmark-landing-page-seanred.netlify.app/)
 
 ## Built with
