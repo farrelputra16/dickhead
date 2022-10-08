@@ -107,6 +107,12 @@ button {
 /* hover effect button */
 button:hover{
   cursor: pointer;
+  background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
+}
+
+/* Make (dark) text white when button gets darker */
+button:hover .text-grayDark {
+  color: white;
 }
 
 section {
