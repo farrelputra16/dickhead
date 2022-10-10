@@ -1,14 +1,14 @@
-import React, { Suspense, useEffect,useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import { gsap, Expo } from "gsap";
-
+import faqs from "./data/faqs";
 
 const Spline = React.lazy(() => import("@splinetool/react-spline"));
 
 function App() {
 
-  
-    useEffect(() => {
+
+  useEffect(() => {
     gsap.to(".overlay span", {
       duration: 2,
       opacity: 0,
@@ -231,43 +231,13 @@ const BrowserCard = ({ classes, imgSrc, browserName, version }) => {
 };
 
 const FaqSection = () => {
-  const [faqBookmark,setfaqBookmark]=useState(false)
-  const [faqBrowser,setfaqBrowser]=useState(false)
-  const [faqMobile,setfaqMobile]=useState(false)
-  const [faqChromium,setfaqChromium]=useState(false)
 
-  const handleBookmark=()=>{
-      if(faqBookmark){
-        setfaqBookmark(false)
-      }
-      else{
-        setfaqBookmark(true)
-      }
+  const [selectedFAQ,setSelectedFAQ] = useState('')
+  const handleSelectedFAQ = (e) => {
+    selectedFAQ==e ? setSelectedFAQ('') : setSelectedFAQ(e)
+
   }
-  const handleChromiumReq=()=>{
-      if(faqChromium){
-        setfaqChromium(false)
-      }
-      else{
-        setfaqChromium(true)
-      }
-  }
-  const handleBrowserReq=()=>{
-      if(faqBrowser){
-        setfaqBrowser(false)
-      }
-      else{
-        setfaqBrowser(true)
-      }
-  }
-  const handleMobileReq=()=>{
-      if(faqMobile){
-        setfaqMobile(false)
-      }
-      else{
-        setfaqMobile(true)
-      }
-  }
+
   return (
     <section>
       <h5>Frequently Asked Questions</h5>
@@ -275,41 +245,25 @@ const FaqSection = () => {
         Here are some of our FAQs. If you have any other questions you’d like
         answered please feel free to email us.
       </p>
+
       <div className="px-[24px faq-container">
-         <div onClick={handleBookmark} className="faqs-section-items">
-           <div  className="flex justify-between border-t-0 px-0 py-[20px] text-[15px] text-left">
-              What is a bookmark?{" "}
-             {faqBookmark ? <Icon  className="chevron" icon="akar-icons:chevron-up" /> : <Icon className="chevron" icon="akar-icons:chevron-down" />}
-           </div>
-          {faqBookmark ? <div className="hidden-text toggle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti delectus sit voluptatum dolor, rem sequi? Illum molestias obcaecati sequi at, recusandae ea dolorum fugiat quisquam.</div> : <div></div>}
-         </div>
-        <div onClick={handleBrowserReq}  className="faqs-section-items">
 
-           <div  className="flex justify-between border-t-0 px-0 py-[20px] text-[15px] text-left">
-              How can I request a new browser?
-              {faqBrowser ? <Icon  className="chevron" icon="akar-icons:chevron-up" /> : <Icon className="chevron" icon="akar-icons:chevron-down" />}
-           </div>
-          {faqBrowser ? <div className="hidden-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti delectus sit voluptatum dolor, rem sequi? Illum molestias obcaecati sequi at, recusandae ea dolorum fugiat quisquam.</div> : <></>}
+        {faqs.map((e,index) => {
 
-        </div>
-        <div className="faqs-section-items">
+          return (
+            <>
+              <div className="faqs-section-items">
+                <div onClick={()=>handleSelectedFAQ(e)} className="flex justify-between border-t-0 px-0 py-[20px] text-[15px] text-left">
+                  {e.faq}
+                  {selectedFAQ.key==index ? <Icon className="chevron" icon="akar-icons:chevron-up" /> : <Icon className="chevron" icon="akar-icons:chevron-down" />}
+                </div>
+                {selectedFAQ.key==index ? <div className="hidden-text">{selectedFAQ.text}</div> : <></>}
+              </div>
+            </>
+          )
 
-          <div onClick={handleMobileReq} className="flex justify-between border-t-0 px-0 py-[20px] text-[15px] text-left">
-            Is there a mobile app?{" "}
-           {faqMobile ? <Icon  className="chevron" icon="akar-icons:chevron-up" /> : <Icon className="chevron" icon="akar-icons:chevron-down" />}
-          </div>
-        {faqMobile ? <div className="hidden-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti delectus sit voluptatum dolor, rem sequi? Illum molestias obcaecati sequi at, recusandae ea dolorum fugiat quisquam.</div> : <></>}
 
-        </div>
-        <div onClick={handleChromiumReq} className="faqs-section-items">
-
-          <div  className="flex justify-between border-t-0 px-0 py-[20px] text-[15px] text-left">
-            What about other Chromium browsers?
-            {faqChromium ? <Icon  className="chevron" icon="akar-icons:chevron-up" /> : <Icon className="chevron" icon="akar-icons:chevron-down" />}
-          </div>
-          {faqChromium ? <div className="hidden-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti delectus sit voluptatum dolor, rem sequi? Illum molestias obcaecati sequi at, recusandae ea dolorum fugiat quisquam.</div> : <></>}
-
-        </div>
+        })}
       </div>
       <div className="flex">
         <button className="mx-auto mt-[48px] mb-[123px]">More Info</button>
