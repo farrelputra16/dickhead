@@ -89,6 +89,13 @@ p {
   color: #242a45;
   opacity: 0.5;
 }
+.hidden-text{
+  font-size: 15px;
+  font-weight: 100;
+  line-height: 25px;
+  color: #242a45;
+  opacity: 0.5;
+}
 
 button {
   padding: 10px 16px;
@@ -107,12 +114,6 @@ button {
 /* hover effect button */
 button:hover{
   cursor: pointer;
-  background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
-}
-
-/* Make (dark) text white when button gets darker */
-button:hover .text-grayDark {
-  color: white;
 }
 
 section {
