@@ -2,12 +2,9 @@ import React, { Suspense, useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import { gsap, Expo } from "gsap";
 
-
 const Spline = React.lazy(() => import("@splinetool/react-spline"));
 
 function App() {
-
-
   useEffect(() => {
     gsap.to(".overlay span", {
       duration: 2,
@@ -64,9 +61,15 @@ const Navbar = () => {
       </div>
       <Icon className="lg:hidden" icon="dashicons:menu-alt3" />
       <div className="hidden lg:flex items-center">
-        <a href="#features" className="text-grayDark text-[13px] link">FEATURES</a>
-        <a href="#download" className="text-grayDark text-[13px] link">DOWNLOAD</a>
-        <a href="#contact" className="text-grayDark text-[13px] link">CONTACT</a>
+        <a href="#features" className="text-grayDark text-[13px] link">
+          FEATURES
+        </a>
+        <a href="#download" className="text-grayDark text-[13px] link">
+          DOWNLOAD
+        </a>
+        <a href="#contact" className="text-grayDark text-[13px] link">
+          CONTACT
+        </a>
         <button className="w-[111px] h-[40px] bg-salmon text-[13px] link flex items-center justify-center">
           Login
         </button>
@@ -231,53 +234,60 @@ const BrowserCard = ({ classes, imgSrc, browserName, version }) => {
 };
 
 const FaqSection = () => {
-
-  const [selectedFAQ,setSelectedFAQ] = useState('')
-
-  const faqs = [
-  
-    {key:0 ,faq: "What is a bookmark?", text:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione repudiandae provident repellendus quasi. Hic."},
-    {key:1 ,faq: "How can I request a new browser?", text:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione repudiandae provident repellendus quasi. Hic."},
-    {key:2 ,faq: "Is there a mobile app?", text:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione repudiandae provident repellendus quasi. Hic."},
-    {key:3 ,faq: "What about other Chromium browsers?", text:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe beatae praesentium nisi assumenda? Iure quaerat, aut repellat expedita porro unde nulla repellendus nihil beatae quam.   "}
- 
-   
- ];
- const handleSelectedFAQ = (e) => {
-  console.log(selectedFAQ,e);
-  selectedFAQ.key===e.key ? setSelectedFAQ(''): setSelectedFAQ(e)
-}
   return (
     <section>
       <h5>Frequently Asked Questions</h5>
       <p>
-        Here are some of our FAQs. If you have any other questions you’d like
+        Here are some of our FAQs. If you have any other questions you'd like
         answered please feel free to email us.
       </p>
 
-      <div className="px-[24px faq-container">
-
-        {faqs.map((e,index) => {
-
-          return (
-            <>
-              <div className="faqs-section-items">
-                <div onClick={()=>handleSelectedFAQ(e)} className="flex justify-between border-t-0 px-0 py-[20px] text-[15px] text-left">
-                  {e.faq}
-                  {selectedFAQ.key===index ? <Icon className="chevron" icon="akar-icons:chevron-up" /> : <Icon className="chevron" icon="akar-icons:chevron-down" />}
-                </div>
-                {selectedFAQ.key===index ? <div className="hidden-text">{selectedFAQ.text}</div> : <></>}
-              </div>
-            </>
-          )
-
-
-        })}
+      <div className="px-[24px] faq-container">
+        <Faq
+          question="What is a bookmark?"
+          answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione repudiandae provident repellendus quasi. Hic."
+        />
+        <Faq
+          question="How can I request a new browser?"
+          answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione repudiandae provident repellendus quasi. Hic."
+        />
+        <Faq
+          question="Is there a mobile app?"
+          answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione repudiandae provident repellendus quasi. Hic."
+        />
+        <Faq
+          question="What about other Chromium browsers?"
+          answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione repudiandae provident repellendus quasi. Hic."
+        />
       </div>
+
       <div className="flex">
         <button className="mx-auto mt-[48px] mb-[123px]">More Info</button>
       </div>
     </section>
+  );
+};
+
+const Faq = ({ question, answer }) => {
+  const [toggle, setToggle] = useState(false);
+  return (
+    <div className="faqs-section-items">
+      <div
+        onClick={() => setToggle(!toggle)}
+        className="flex justify-between border-t-0 px-0 py-[20px] text-[15px] text-left"
+      >
+        {question}
+        <Icon
+          className="chevron"
+          icon={`akar-icons:chevron-${toggle ? "up" : "down"}`}
+        />
+      </div>
+      {toggle ? (
+        <div className="text-[15px] font-thin leading-[25px] text-[grayDark] opacity-[0.5]">
+          {answer}
+        </div>
+      ) : null}
+    </div>
   );
 };
 
@@ -323,9 +333,16 @@ const Footer = () => {
             bookmark
           </span>
         </li>
-        <li><a href="#features">FEATURES</a></li>
-        <li> <a href="#download">DOWNLOAD</a> </li>
-        <li><a href="#contact">CONTACT</a></li>
+        <li>
+          <a href="#features">FEATURES</a>
+        </li>
+        <li>
+          {" "}
+          <a href="#download">DOWNLOAD</a>{" "}
+        </li>
+        <li>
+          <a href="#contact">CONTACT</a>
+        </li>
         <li className="flex justify-center gap-[40px] ml-auto">
           <Icon className="text-white" icon="dashicons:facebook" width="25px" />
           <Icon
