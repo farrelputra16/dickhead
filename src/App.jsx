@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import { gsap, Expo } from "gsap";
-import faqs from "./data/faqs";
+
 
 const Spline = React.lazy(() => import("@splinetool/react-spline"));
 
@@ -233,11 +233,20 @@ const BrowserCard = ({ classes, imgSrc, browserName, version }) => {
 const FaqSection = () => {
 
   const [selectedFAQ,setSelectedFAQ] = useState('')
-  const handleSelectedFAQ = (e) => {
-    selectedFAQ==e ? setSelectedFAQ('') : setSelectedFAQ(e)
 
-  }
-
+  const faqs = [
+  
+    {key:0 ,faq: "What is a bookmark?", text:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione repudiandae provident repellendus quasi. Hic."},
+    {key:1 ,faq: "How can I request a new browser?", text:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione repudiandae provident repellendus quasi. Hic."},
+    {key:2 ,faq: "Is there a mobile app?", text:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione repudiandae provident repellendus quasi. Hic."},
+    {key:3 ,faq: "What about other Chromium browsers?", text:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe beatae praesentium nisi assumenda? Iure quaerat, aut repellat expedita porro unde nulla repellendus nihil beatae quam.   "}
+ 
+   
+ ];
+ const handleSelectedFAQ = (e) => {
+  console.log(selectedFAQ,e);
+  selectedFAQ.key===e.key ? setSelectedFAQ(''): setSelectedFAQ(e)
+}
   return (
     <section>
       <h5>Frequently Asked Questions</h5>
@@ -255,9 +264,9 @@ const FaqSection = () => {
               <div className="faqs-section-items">
                 <div onClick={()=>handleSelectedFAQ(e)} className="flex justify-between border-t-0 px-0 py-[20px] text-[15px] text-left">
                   {e.faq}
-                  {selectedFAQ.key==index ? <Icon className="chevron" icon="akar-icons:chevron-up" /> : <Icon className="chevron" icon="akar-icons:chevron-down" />}
+                  {selectedFAQ.key===index ? <Icon className="chevron" icon="akar-icons:chevron-up" /> : <Icon className="chevron" icon="akar-icons:chevron-down" />}
                 </div>
-                {selectedFAQ.key==index ? <div className="hidden-text">{selectedFAQ.text}</div> : <></>}
+                {selectedFAQ.key===index ? <div className="hidden-text">{selectedFAQ.text}</div> : <></>}
               </div>
             </>
           )
