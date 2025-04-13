@@ -31,7 +31,6 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background: var(--salmon);
-  /* border: 0.25em solid var(--gray-dark); */
   border-radius: 100vw;
 }
 
@@ -104,7 +103,6 @@ button {
   transition: all 0.3s ease;
 }
 
-/* hover effect button */
 button:hover {
   cursor: pointer;
 }
@@ -132,6 +130,7 @@ a {
   transition: all 0.3s ease;
   border-bottom: 4px solid transparent;
 }
+
 a:hover {
   border-bottom: 4px solid #fa5959;
 }
@@ -163,4 +162,29 @@ footer ul li {
   font-size: 15px;
   line-height: 17px;
   letter-spacing: 1.73077px;
+}
+
+.bubble-chat {
+  position: absolute;
+  top: -60px;
+  right: -100px;
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.bubble-chat::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  right: 25px;
+  border-width: 12px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
 }
