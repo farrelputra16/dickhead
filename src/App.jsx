@@ -39,21 +39,33 @@ function App() {
 }
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
   return (
-    <nav className="max-w-[1440px] mx-auto flex items-center justify-between px-[32px] py-[40px]">
-      <div className="logo flex">
+    <nav className="max-w-[1440px] mx-auto flex items-center justify-between px-4 py-6 md:px-8 md:py-10">
+      <div className="logo flex items-center">
         <img
-          className="w-[25px] h-[25px]"
+          className="w-6 h-6 md:w-8 md:h-8"
           src="images/full-window.png"
           alt="logo"
         />
-        <span className="ml-[12px] uppercase text-xl tracking-widest">
+        <span className="ml-3 uppercase text-lg tracking-widest md:text-xl">
           suck my dick
         </span>
       </div>
-      <Icon className="lg:hidden" icon="dashicons:menu-alt3" />
-      <div className="hidden lg:flex items-center">
-        <button className="w-[111px] h-[40px] bg-salmon text-[13px] link flex items-center justify-center">
+      <button
+        className="lg:hidden"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label="Toggle menu"
+      >
+        <Icon icon="dashicons:menu-alt3" className="w-8 h-8" />
+      </button>
+      <div
+        className={`${
+          isOpen ? "flex" : "hidden"
+        } lg:flex flex-col lg:flex-row items-center absolute lg:static top-16 left-0 w-full lg:w-auto bg-white lg:bg-transparent shadow-lg lg:shadow-none p-4 lg:p-0`}
+      >
+        <button className="w-full lg:w-[111px] h-10 bg-salmon text-sm md:text-[13px] flex items-center justify-center mt-2 lg:mt-0">
           Buy
         </button>
       </div>
@@ -64,14 +76,8 @@ const Navbar = () => {
 const Overlay = () => {
   return (
     <div className="overlay">
-      <img
-        className="w-[48px] lg:w-[108px]"
-        src="images/logo-3x.png"
-        alt="logo"
-      />
-      <span className="ml-[16px] text-[32px] uppercase lg:text-[72px] tracking-widest">
-        suck my dick
-      </span>
+      <img src="images/logo-3x.png" alt="logo" />
+      <span>suck my dick</span>
     </div>
   );
 };
@@ -96,13 +102,9 @@ const BubbleChat = () => {
 
 const HeroSection = () => {
   return (
-    <div className="mt-[48px] lg:grid lg:grid-cols-2 relative">
-      <div className="image-container mx-auto lg:scale-125 relative mt-[80px]">
-        <img
-          className="w-[300px] h-[300px] object-contain"
-          src="images/logo-3x.png"
-          alt="logo"
-        />
+    <div className="mt-8 md:mt-12 lg:grid lg:grid-cols-2 relative gap-6">
+      <div className="image-container mx-auto">
+        <img src="images/logo-3x.png" alt="logo" />
         <BubbleChat />
       </div>
       <section>
@@ -115,8 +117,8 @@ const HeroSection = () => {
             to its provocative name. Built for fun and community vibes, SMD aims
             to shake up the meme token space with its unapologetic attitude.
           </p>
-          <div className="flex gap-[14px] px-[32px] lg:px-0">
-            <button>CA : </button>
+          <div className="flex justify-center gap-3 px-4 md:px-0">
+            <button>Get it on Pump</button>
           </div>
         </div>
       </section>

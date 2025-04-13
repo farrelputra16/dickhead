@@ -19,14 +19,14 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 1em;
-  height: 1em;
+  width: 0.5em;
+  height: 0.5em;
 }
 
 body::-webkit-scrollbar-track {
   background: rgb(224, 224, 224);
   border-radius: 100vw;
-  margin-block: 0.5em;
+  margin-block: 0.25em;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -39,32 +39,65 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100vh;
   background: white;
-  top: 0%;
-  z-index: 1;
+  top: 0;
+  left: 0;
+  z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 100;
+  flex-direction: column;
+}
+
+.overlay img {
+  width: 48px;
+  max-width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .overlay img {
+    width: 108px;
+  }
+}
+
+.overlay span {
+  margin-left: 16px;
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+@media (min-width: 1024px) {
+  .overlay span {
+    font-size: 72px;
+  }
 }
 
 .layout {
   max-width: 1440px;
-  margin: auto;
+  margin: 0 auto;
   overflow-x: hidden;
-  box-shadow: 0px 18px 18px -4px rgba(73, 93, 207, 0.75);
+  box-shadow: 0px 8px 12px -4px rgba(73, 93, 207, 0.2);
+  padding: 0 16px;
 }
 
 h1 {
-  color: #242a45;
-  font-size: 30px;
+  color: var(--gray-dark);
+  font-size: 24px;
   font-weight: 500;
-  line-height: 40px;
+  line-height: 32px;
   text-align: center;
-  letter-spacing: -0.09375px;
+  letter-spacing: -0.05px;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 
 h2,
@@ -73,118 +106,248 @@ h4,
 h5,
 h6 {
   font-weight: 500;
-  font-size: 24px;
-  line-height: 52px;
+  font-size: 20px;
+  line-height: 28px;
   text-align: center;
-  letter-spacing: -0.075px;
-  color: #242a45;
+  letter-spacing: -0.05px;
+  color: var(--gray-dark);
+}
+
+@media (min-width: 768px) {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 24px;
+    line-height: 52px;
+  }
 }
 
 p {
-  padding: 16px 32px;
-  font-size: 15px;
+  padding: 8px 16px;
+  font-size: 14px;
   text-align: center;
-  line-height: 25px;
-  color: #242a45;
-  opacity: 0.5;
+  line-height: 22px;
+  color: var(--gray-dark);
+  opacity: 0.6;
+}
+
+@media (min-width: 768px) {
+  p {
+    padding: 16px 32px;
+    font-size: 15px;
+    line-height: 25px;
+  }
 }
 
 button {
-  padding: 10px 16px;
-  background-color: #5267df;
-  box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.20012);
+  padding: 8px 12px;
+  background-color: var(--blue);
+  box-shadow: 0px 4px 6px -2px rgba(73, 93, 207, 0.2);
   border-radius: 5px;
   color: white;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 28px;
+  font-size: 13px;
+  line-height: 24px;
   text-align: center;
   letter-spacing: 0.25px;
   transition: all 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+}
+
+@media (min-width: 768px) {
+  button {
+    padding: 10px 16px;
+    font-size: 14px;
+    line-height: 28px;
+    width: auto;
+  }
 }
 
 button:hover {
   cursor: pointer;
+  background-color: #3e54a3;
 }
 
 section {
   max-width: 540px;
   margin: 0 auto;
-  margin-bottom: 72px;
+  margin-bottom: 48px;
+}
+
+@media (min-width: 1024px) {
+  section {
+    margin-bottom: 72px;
+  }
 }
 
 li {
   width: 100%;
-  padding: 32px;
-  border-top: 1px solid rgba(73, 93, 207, 0.20012);
-  border-bottom: 1px solid rgba(73, 93, 207, 0.20012);
-  font-size: 16px;
-  line-height: 17px;
+  padding: 16px;
+  border-top: 1px solid rgba(73, 93, 207, 0.1);
+  border-bottom: 1px solid rgba(73, 93, 207, 0.1);
+  font-size: 14px;
+  line-height: 16px;
   text-align: center;
-  letter-spacing: 0.533333px;
-  color: #242a45;
+  letter-spacing: 0.4px;
+  color: var(--gray-dark);
+}
+
+@media (min-width: 768px) {
+  li {
+    padding: 32px;
+    font-size: 16px;
+    line-height: 17px;
+    letter-spacing: 0.533333px;
+  }
 }
 
 a {
-  padding: 28px;
+  padding: 16px;
   transition: all 0.3s ease;
-  border-bottom: 4px solid transparent;
+  border-bottom: 2px solid transparent;
+}
+
+@media (min-width: 768px) {
+  a {
+    padding: 28px;
+    border-bottom: 4px solid transparent;
+  }
 }
 
 a:hover {
-  border-bottom: 4px solid #fa5959;
+  border-bottom: 2px solid var(--salmon);
+}
+
+@media (min-width: 768px) {
+  a:hover {
+    border-bottom: 4px solid var(--salmon);
+  }
 }
 
 .chevron path {
-  color: #5267df;
-  stroke-width: 4px;
+  color: var(--blue);
+  stroke-width: 3px;
+}
+
+@media (min-width: 768px) {
+  .chevron path {
+    stroke-width: 4px;
+  }
 }
 
 input {
-  padding: 10px 20px;
+  padding: 8px 16px;
   border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  input {
+    padding: 10px 20px;
+  }
 }
 
 input::placeholder {
-  color: #242a45;
-  opacity: 25%;
-  line-height: 28px;
-  font-size: 14px;
+  color: var(--gray-dark);
+  opacity: 0.4;
+  font-size: 13px;
+  line-height: 24px;
   letter-spacing: 0.25px;
 }
 
+@media (min-width: 768px) {
+  input::placeholder {
+    font-size: 14px;
+    line-height: 28px;
+  }
+}
+
 footer ul li {
-  margin: 32px 0;
+  margin: 16px 0;
   padding: 0;
   border: none;
   color: white;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 17px;
-  letter-spacing: 1.73077px;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 768px) {
+  footer ul li {
+    margin: 32px 0;
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 1.73077px;
+  }
+}
+
+.image-container {
+  margin-top: 40px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .image-container {
+    margin-top: 80px;
+  }
+}
+
+.image-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .image-container img {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 .bubble-chat {
   position: absolute;
-  top: -60px;
-  right: -100px;
+  top: -50px;
+  right: -80px;
   background-color: #fff;
   color: #000;
-  padding: 10px 20px;
-  border-radius: 25px;
+  padding: 8px 16px;
+  border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   white-space: nowrap;
   z-index: 10;
 }
 
+@media (max-width: 640px) {
+  .bubble-chat {
+    top: -40px;
+    right: 10px;
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
 .bubble-chat::after {
   content: "";
   position: absolute;
-  bottom: -12px;
-  right: 25px;
-  border-width: 12px;
+  bottom: -10px;
+  right: 20px;
+  border-width: 10px;
   border-style: solid;
   border-color: #fff transparent transparent transparent;
+}
+
+@media (max-width: 640px) {
+  .bubble-chat::after {
+    bottom: -8px;
+    right: 15px;
+    border-width: 8px;
+  }
 }
