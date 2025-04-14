@@ -118,7 +118,7 @@ const HeroSection = () => {
             to shake up the meme token space with its unapologetic attitude.
           </p>
           <div className="flex justify-center gap-3 px-4 md:px-0">
-            <button>Get it on Pump</button>
+            <button>CA : DahsGB8ZH6H6hFEv8EjBKmBhZbxJsHKvpeAeUHcopump</button>
           </div>
         </div>
       </section>
