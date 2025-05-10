@@ -34,6 +34,7 @@ function App() {
         <Overlay />
         <div className="layout">
           <HeroSection />
+          <AudioSection />
           <TikTokSection />
           <SocialSection />
         </div>
@@ -189,6 +190,45 @@ const TikTokSection = () => {
             ></iframe>
           </div>
         </div>
+      </div>
+    </section>
+  );
+};
+
+const AudioSection = () => {
+  const audioRef = useRef(null);
+
+  const handleTalk = () => {
+    if (audioRef.current) {
+      audioRef.current.play();
+    }
+  };
+
+  useEffect(() => {
+    gsap.to(".floating-image", {
+      y: -20,
+      repeat: -1,
+      yoyo: true,
+      duration: 2,
+      ease: "sine.inOut",
+    });
+  }, []);
+
+  return (
+    <section className="mt-12 md:mt-16 py-10 bg-dark text-center">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-8">
+        <img
+          src="images/full-window.png"
+          alt="Full Window"
+          className="floating-image mx-auto max-w-xs md:max-w-3xl"
+        />
+        <button
+          onClick={handleTalk}
+          className="mt-6 w-full lg:w-[111px] h-10 bg-salmon text-sm md:text-[13px] flex items-center justify-center mx-auto"
+        >
+          Talk
+        </button>
+        <audio ref={audioRef} src="/tung-tung-sahur.mp3" preload="auto" />
       </div>
     </section>
   );
