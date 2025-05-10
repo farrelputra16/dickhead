@@ -124,7 +124,7 @@ const HeroSection = () => {
       </div>
       <section>
         <div className="max-w-[540px] mx-auto">
-          <h1 className="text-3xl font-bold mb-4">TUNG TUNG SAHUR</h1>
+          <h1 className="text-3xl font-bold mb-4">TUNG TUNG SAHUR OFFICIAL</h1>
           <p className="mb-4">
             Tung Tung Sahur is a Solana-based meme token inspired by the haunting
             urban legend of Anomali Tung Tung Tung Sahur With 100K Followers on
@@ -200,7 +200,7 @@ const SocialSection = () => {
       <h2 className="text-xl font-semibold mb-4">Join Our Community</h2>
       <div className="flex justify-center gap-6">
         <a
-          href="https://tiktok.com/@tungtungsahur"
+          href="https://www.tiktok.com/@real.tungsahur?_t=ZN-8wEkcXVf6Oc&_r=1"
           target="_blank"
           rel="noopener noreferrer"
           className="text-white hover:text-salmon"
