@@ -5,8 +5,8 @@
 :root {
   --blue: #5267df;
   --salmon: #fa5959;
-  --gray-dark: #242a45;
-  --gray-medium: #9194a2;
+  --gray-dark: #4b5563;
+  --gray-medium: #9ca3af;
 }
 
 body {
@@ -16,8 +16,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #1a1a1a;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 body::-webkit-scrollbar {
@@ -26,25 +26,25 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #333333;
+  background: #e5e7eb;
   border-radius: 100vw;
   margin-block: 0.25em;
 }
 
 body::-webkit-scrollbar-thumb {
-  background: var(--salmon);
+  background: #9ca3af;
   border-radius: 100vw;
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background: var(--blue);
+  background: #6b7280;
 }
 
 .overlay {
   position: fixed;
   width: 100%;
   height: 100vh;
-  background: #1a1a1a;
+  background: #ffffff;
   top: 0;
   left: 0;
   z-index: 100;
@@ -70,7 +70,7 @@ body::-webkit-scrollbar-thumb:hover {
   font-size: 32px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: #ffffff;
+  color: #000000;
 }
 
 @media (min-width: 1024px) {
@@ -83,13 +83,13 @@ body::-webkit-scrollbar-thumb:hover {
   max-width: 1440px;
   margin: 0 auto;
   overflow-x: hidden;
-  box-shadow: 0px 8px 12px -4px rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 8px 12px -4px rgba(0, 0, 0, 0.1);
   padding: 0 16px;
-  background-color: #1a1a1a;
+  background-color: #ffffff;
 }
 
 h1 {
-  color: #ffffff;
+  color: #000000;
   font-size: 24px;
   font-weight: 500;
   line-height: 32px;
@@ -114,7 +114,7 @@ h6 {
   line-height: 28px;
   text-align: center;
   letter-spacing: -0.05px;
-  color: #ffffff;
+  color: #000000;
 }
 
 @media (min-width: 768px) {
@@ -133,7 +133,7 @@ p {
   font-size: 14px;
   text-align: center;
   line-height: 22px;
-  color: #ffffff;
+  color: #000000;
   opacity: 0.9;
 }
 
@@ -147,10 +147,10 @@ p {
 
 button {
   padding: 8px 12px;
-  background-color: var(--blue);
-  box-shadow: 0px 4px 6px -2px rgba(255, 255, 255, 0.2);
+  background-color: #e5e7eb;
+  box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  color: #ffffff;
+  color: #000000;
   font-weight: 500;
   font-size: 13px;
   line-height: 24px;
@@ -172,7 +172,7 @@ button {
 
 button:hover {
   cursor: pointer;
-  background-color: #3e54a3;
+  background-color: #d1d5db;
 }
 
 section {
@@ -190,13 +190,13 @@ section {
 li {
   width: 100%;
   padding: 16px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
   font-size: 14px;
   line-height: 16px;
   text-align: center;
   letter-spacing: 0.4px;
-  color: #ffffff;
+  color: #000000;
 }
 
 @media (min-width: 768px) {
@@ -212,7 +212,7 @@ a {
   padding: 16px;
   transition: all 0.3s ease;
   border-bottom: 2px solid transparent;
-  color: #ffffff;
+  color: #000000;
 }
 
 @media (min-width: 768px) {
@@ -223,17 +223,17 @@ a {
 }
 
 a:hover {
-  border-bottom: 2px solid var(--salmon);
+  border-bottom: 2px solid #6b7280;
 }
 
 @media (min-width: 768px) {
   a:hover {
-    border-bottom: 4px solid var(--salmon);
+    border-bottom: 4px solid #6b7280;
   }
 }
 
 .chevron path {
-  color: var(--blue);
+  color: #000000;
   stroke-width: 3px;
 }
 
@@ -248,8 +248,9 @@ input {
   border-radius: 5px;
   width: 100%;
   box-sizing: border-box;
-  background-color: #333333;
-  color: #ffffff;
+  background-color: #f3f4f6;
+  color: #000000;
+  border: 1px solid #d1d5db;
 }
 
 @media (min-width: 768px) {
@@ -259,7 +260,7 @@ input {
 }
 
 input::placeholder {
-  color: #ffffff;
+  color: #000000;
   opacity: 0.4;
   font-size: 13px;
   line-height: 24px;
@@ -277,7 +278,7 @@ footer ul li {
   margin: 16px 0;
   padding: 0;
   border: none;
-  color: #ffffff;
+  color: #000000;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -321,11 +322,11 @@ footer ul li {
   position: absolute;
   top: -50px;
   right: -80px;
-  background-color: #333333;
-  color: #ffffff;
+  background-color: #f3f4f6;
+  color: #000000;
   padding: 8px 16px;
   border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-size: 14px;
   font-weight: bold;
   white-space: nowrap;
@@ -348,7 +349,7 @@ footer ul li {
   right: 20px;
   border-width: 10px;
   border-style: solid;
-  border-color: #333333 transparent transparent transparent;
+  border-color: #f3f4f6 transparent transparent transparent;
 }
 
 @media (max-width: 640px) {
