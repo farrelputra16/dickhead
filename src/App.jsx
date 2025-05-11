@@ -112,7 +112,7 @@ const Navbar = () => {
         </span>
       </div>
       <span className="text-sm md:text-base font-semibold hidden lg:block" style={{ color: 'black' }}>
-        CA: Coming Soon
+        CA: DxcYqRjNi2JPiGyLXTJxQD6KHAz8ZznkmPTDEYTbpump
       </span>
       <button
         className="lg:hidden"
@@ -128,7 +128,7 @@ const Navbar = () => {
         style={{ background: isOpen ? '#FFFFFF' : 'transparent' }}
       >
         <span className="text-sm md:text-base font-semibold lg:hidden mb-4" style={{ color: 'black' }}>
-          CA: Coming Soon
+          CA: DxcYqRjNi2JPiGyLXTJxQD6KHAz8ZznkmPTDEYTbpump
         </span>
         <div className="flex justify-center gap-6">
           <a
@@ -296,7 +296,7 @@ const HeroSection = () => {
               CA : Coming Soon
             </button>
             <a
-              href="https://pump.fun/tungtungsahur"
+              href="https://pump.fun/coin/DxcYqRjNi2JPiGyLXTJxQD6KHAz8ZznkmPTDEYTbpump"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gray-200 text-black px-4 py-2 rounded hover:bg-gray-300"
