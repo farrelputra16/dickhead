@@ -26,6 +26,9 @@ import { gsap } from "gsap";
 
 function App() {
   useEffect(() => {
+    // Set custom cursor dynamically
+    document.body.style.cursor = `url('/cursor.png') 16 16, auto`; // Adjust hotspot (16, 16) if needed
+
     gsap.to(".overlay span", {
       duration: 2,
       opacity: 0,
@@ -82,7 +85,6 @@ function App() {
       <main>
         <Overlay />
         <div className="layout">
-          <BubbleSection />
           <TikTokHeaderSection />
           <HeroSection />
           <AudioSection />
@@ -193,40 +195,15 @@ const BubbleChat = () => {
   );
 };
 
-const BubbleMap = () => {
-  useEffect(() => {
-    gsap.to(".bubble-map", {
-      y: -20,
-      repeat: -1,
-      yoyo: true,
-      duration: 1.5,
-      ease: "sine.inOut",
-    });
-  }, []);
-
-  return (
-    <div className="bubble-map relative mx-auto" style={{ background: 'linear-gradient(90deg, #00B7EB, #FF69B4)', color: '#FFFFFF' }}>
-      <span className="font-bold">This memecoin is officially backed by the OG tung tung sahur account</span>
-    </div>
-  );
-};
-
-const BubbleSection = () => {
-  return (
-    <section className="mt-12 md:mt-16 py-10" style={{ background: 'linear-gradient(135deg, #8B5A2B, #FF69B4)' }}>
-      <div className="max-w-[1440px] mx-auto px-4 md:px-8">
-        <BubbleMap />
-      </div>
-    </section>
-  );
-};
-
 const TikTokHeaderSection = () => {
   return (
     <section className="py-10" style={{ background: 'linear-gradient(135deg, #8B5A2B, #FF69B4)' }}>
       <div className="max-w-[1440px] mx-auto px-4 md:px-8">
         <div className="flex flex-col items-center gap-6">
           <div className="text-center">
+            <p className="text-2xl md:text-3xl font-bold mb-4 text-center" style={{ color: 'white' }}>
+              This memecoin is officially backed by the OG tung tung sahur account
+            </p>
             <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: 'white' }}>
               100K Followers on TikTok
             </h2>
