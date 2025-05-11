@@ -3,10 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --blue: #5267df;
-  --salmon: #fa5959;
-  --gray-dark: #4b5563;
-  --gray-medium: #9ca3af;
+  --neon-pink: #FF69B4;
+  --lime-green: #00FF7F;
+  --electric-blue: #00B7EB;
+  --gold: #FFD700;
+  --base-light: #F5F5F5;
+  --dark-slate-blue: #483D8B;
 }
 
 body {
@@ -16,7 +18,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ffffff;
+  background-color: var(--base-light);
   color: #000000;
 }
 
@@ -32,19 +34,19 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #9ca3af;
+  background: var(--electric-blue);
   border-radius: 100vw;
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background: #6b7280;
+  background: var(--neon-pink);
 }
 
 .overlay {
   position: fixed;
   width: 100%;
   height: 100vh;
-  background: #ffffff;
+  background: linear-gradient(135deg, var(--base-light), var(--gold));
   top: 0;
   left: 0;
   z-index: 100;
@@ -57,6 +59,7 @@ body::-webkit-scrollbar-thumb:hover {
 .overlay img {
   width: 48px;
   max-width: 100%;
+  box-shadow: 0 0 15px var(--lime-green);
 }
 
 @media (min-width: 1024px) {
@@ -70,7 +73,7 @@ body::-webkit-scrollbar-thumb:hover {
   font-size: 32px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: #000000;
+  color: var(--neon-pink);
 }
 
 @media (min-width: 1024px) {
@@ -85,11 +88,11 @@ body::-webkit-scrollbar-thumb:hover {
   overflow-x: hidden;
   box-shadow: 0px 8px 12px -4px rgba(0, 0, 0, 0.1);
   padding: 0 16px;
-  background-color: #ffffff;
+  background-color: var(--base-light);
 }
 
 h1 {
-  color: #000000;
+  color: var(--electric-blue);
   font-size: 24px;
   font-weight: 500;
   line-height: 32px;
@@ -114,7 +117,7 @@ h6 {
   line-height: 28px;
   text-align: center;
   letter-spacing: -0.05px;
-  color: #000000;
+  color: var(--lime-green);
 }
 
 @media (min-width: 768px) {
@@ -147,10 +150,10 @@ p {
 
 button {
   padding: 8px 12px;
-  background-color: #e5e7eb;
+  background: linear-gradient(90deg, var(--neon-pink), var(--lime-green));
   box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  color: #000000;
+  color: var(--gold);
   font-weight: 500;
   font-size: 13px;
   line-height: 24px;
@@ -172,7 +175,7 @@ button {
 
 button:hover {
   cursor: pointer;
-  background-color: #d1d5db;
+  background: linear-gradient(90deg, var(--electric-blue), var(--gold));
 }
 
 section {
@@ -223,12 +226,12 @@ a {
 }
 
 a:hover {
-  border-bottom: 2px solid #6b7280;
+  border-bottom: 2px solid var(--gold);
 }
 
 @media (min-width: 768px) {
   a:hover {
-    border-bottom: 4px solid #6b7280;
+    border-bottom: 4px solid var(--gold);
   }
 }
 
@@ -250,7 +253,7 @@ input {
   box-sizing: border-box;
   background-color: #f3f4f6;
   color: #000000;
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--neon-pink);
 }
 
 @media (min-width: 768px) {
@@ -260,8 +263,8 @@ input {
 }
 
 input::placeholder {
-  color: #000000;
-  opacity: 0.4;
+  color: var(--lime-green);
+  opacity: 0.6;
   font-size: 13px;
   line-height: 24px;
   letter-spacing: 0.25px;
@@ -309,6 +312,7 @@ footer ul li {
   width: 200px;
   height: 200px;
   object-fit: contain;
+  box-shadow: 0 0 10px var(--electric-blue);
 }
 
 @media (min-width: 768px) {
@@ -322,8 +326,8 @@ footer ul li {
   position: absolute;
   top: -50px;
   right: -80px;
-  background-color: #f3f4f6;
-  color: #000000;
+  background: linear-gradient(90deg, var(--electric-blue), var(--neon-pink));
+  color: var(--gold);
   padding: 8px 16px;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -331,6 +335,7 @@ footer ul li {
   font-weight: bold;
   white-space: nowrap;
   z-index: 10;
+  text-shadow: 0 0 5px #000000;
 }
 
 @media (max-width: 640px) {
@@ -349,7 +354,7 @@ footer ul li {
   right: 20px;
   border-width: 10px;
   border-style: solid;
-  border-color: #f3f4f6 transparent transparent transparent;
+  border-color: var(--electric-blue) transparent transparent transparent;
 }
 
 @media (max-width: 640px) {

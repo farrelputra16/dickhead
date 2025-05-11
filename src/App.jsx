@@ -14,6 +14,11 @@ import { gsap } from "gsap";
 //         100: "#FF6F61",
 //         600: "#E63946",
 //       },
+//       'neon-pink': '#FF69B4',
+//       'lime-green': '#00FF7F',
+//       'electric-blue': '#00B7EB',
+//       'gold': '#FFD700',
+//       'dark-slate-blue': '#483D8B',
 //     },
 //   },
 // }
@@ -50,6 +55,7 @@ function App() {
       img.className = "floating-img absolute w-12 h-12 opacity-70";
       img.style.left = `${Math.random() * 90}vw`;
       img.style.top = `${Math.random() * 90}vh`;
+      img.style.boxShadow = "0 0 10px #FF69B4";
       document.body.appendChild(img);
       floatingImages.push(img);
 
@@ -70,7 +76,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App bg-white">
+    <div className="App" style={{ backgroundColor: '#F5F5F5' }}>
       <Navbar />
       <main>
         <Overlay />
@@ -96,14 +102,14 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="max-w-[1440px] mx-auto flex items-center justify-between px-4 py-6 md:px-8 md:py-10 bg-white text-black">
+    <nav className="max-w-[1440px] mx-auto flex items-center justify-between px-4 py-6 md:px-8 md:py-10" style={{ background: 'linear-gradient(90deg, #F5F5F5, #E6E6FA)' }}>
       <div className="logo flex items-center">
         <img
           className="w-6 h-6 md:w-8 md:h-8"
           src="images/full-window.png"
           alt="logo"
         />
-        <span className="ml-3 uppercase text-lg tracking-widest md:text-xl">
+        <span className="ml-3 uppercase text-lg tracking-widest md:text-xl" style={{ color: '#483D8B' }}>
           tung tung sahur
         </span>
       </div>
@@ -117,11 +123,13 @@ const Navbar = () => {
       <div
         className={`${
           isOpen ? "flex" : "hidden"
-        } lg:flex flex-col lg:flex-row items-center absolute lg:static top-16 left-0 w-full lg:w-auto bg-white lg:bg-white shadow-lg lg:shadow-none p-4 lg:p-0`}
+        } lg:flex flex-col lg:flex-row items-center absolute lg:static top-16 left-0 w-full lg:w-auto bg-white lg:bg-transparent shadow-lg lg:shadow-none p-4 lg:p-0`}
+        style={{ background: isOpen ? '#FFFFFF' : 'transparent' }}
       >
         <button
           onClick={handlePlay}
           className="w-full lg:w-[111px] h-10 bg-gray-200 text-sm md:text-[20px] flex items-center justify-center mt-2 lg:mt-0 text-black"
+          style={{ background: 'linear-gradient(90deg, #D3D3D3, #B0E0E6)', color: '#483D8B' }}
         >
           Play Sound
         </button>
@@ -133,9 +141,9 @@ const Navbar = () => {
 
 const Overlay = () => {
   return (
-    <div className="overlay fixed inset-0 bg-white z-50 flex flex-col justify-center items-center">
-      <img src="images/full-window.png" alt="logo" />
-      <span className="text-xl mt-4 font-bold text-black">TUNG TUNG SAHUR</span>
+    <div className="overlay" style={{ background: 'linear-gradient(135deg, #F5F5F5, #FFD700)' }}>
+      <img src="images/full-window.png" alt="logo" style={{ boxShadow: '0 0 15px #00FF7F' }} />
+      <span className="text-xl mt-4 font-bold" style={{ color: '#FF69B4' }}>TUNG TUNG SAHUR</span>
     </div>
   );
 };
@@ -152,7 +160,7 @@ const BubbleChat = () => {
   }, []);
 
   return (
-    <div className="bubble-chat mt-4">
+    <div className="bubble-chat" style={{ background: 'linear-gradient(90deg, #00B7EB, #FF69B4)', color: '#FFD700' }}>
       <span className="text-black font-semibold">I AM TUNG TUNG SAHUR!!</span>
     </div>
   );
@@ -170,15 +178,15 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="mt-8 md:mt-12 lg:grid lg:grid-cols-2 relative gap-6 px-4 md:px-8 bg-white">
+    <div className="mt-8 md:mt-12 lg:grid lg:grid-cols-2 relative gap-6 px-4 md:px-8" style={{ background: 'linear-gradient(45deg, #F5F5F5, #00FF7F)' }}>
       <div className="image-container mx-auto">
-        <img src="images/logo-3x.png" alt="logo" className="max-w-xs" />
+        <img src="images/logo-3x.png" alt="logo" className="max-w-xs" style={{ boxShadow: '0 0 10px #FF69B4' }} />
         <BubbleChat />
       </div>
       <section>
         <div className="max-w-[540px] mx-auto">
-          <h1 className="text-3xl font-bold mb-4 text-black">TUNG TUNG SAHUR</h1>
-          <p className="mb-4 text-black">
+          <h1 className="text-3xl font-bold mb-4" style={{ color: '#00B7EB' }}>TUNG TUNG SAHUR</h1>
+          <p className="mb-4" style={{ color: '#000000' }}>
             Tung Tung Sahur is a Solana-based meme token inspired by the haunting
             urban legend of Anomali Tung Tung Tung Sahur With 100K Followers on
             Tiktok — a mysterious entity that combines the tradition of waking
@@ -190,7 +198,7 @@ const HeroSection = () => {
             humor, and horror.
           </p>
           <div className="flex justify-center gap-3">
-            <button className="bg-gray-200 text-black px-4 py-2 rounded">
+            <button className="bg-gray-200 text-black px-4 py-2 rounded" style={{ background: '#FFD700', color: '#FF69B4' }}>
               CA : Coming Soon
             </button>
             <a
@@ -198,12 +206,13 @@ const HeroSection = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gray-200 text-black px-4 py-2 rounded hover:bg-gray-300"
+              style={{ background: '#00FF7F', color: '#000000' }}
             >
               Buy
             </a>
           </div>
         </div>
-        <img src="images/full-window.png" alt="Tungtung" className="hero-tungtung max-w-xs mt-6" />
+        <img src="images/full-window.png" alt="Tungtung" className="hero-tungtung max-w-xs mt-6" style={{ boxShadow: '0 0 15px #00B7EB' }} />
       </section>
     </div>
   );
@@ -221,17 +230,18 @@ const TikTokSection = () => {
   }, []);
 
   return (
-    <section className="mt-12 md:mt-16 py-10 bg-white">
+    <section className="mt-12 md:mt-16 py-10" style={{ background: 'linear-gradient(135deg, #F5F5F5, #FF69B4)' }}>
       <div className="max-w-[1440px] mx-auto px-4 md:px-8">
         <div className="flex flex-col items-center gap-6">
           <div className="text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-black">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: '#00FF7F' }}>
               100K Followers on TikTok
             </h2>
             <img
               src="images/tiktokpage.jpg"
               alt="TikTok page"
               className="mx-auto max-w-xs md:max-w-sm"
+              style={{ boxShadow: '0 0 10px #FFD700' }}
             />
           </div>
           <div className="tiktok-embed-container w-full">
@@ -252,7 +262,7 @@ const TikTokSection = () => {
               title="TikTok Video 2"
             ></iframe>
           </div>
-          <img src="images/full-window.png" alt="Tungtung" className="tiktok-tungtung max-w-xs mt-6" />
+          <img src="images/full-window.png" alt="Tungtung" className="tiktok-tungtung max-w-xs mt-6" style={{ boxShadow: '0 0 15px #00B7EB' }} />
         </div>
       </div>
     </section>
@@ -279,16 +289,18 @@ const AudioSection = () => {
   }, []);
 
   return (
-    <section className="mt-12 md:mt-16 py-10 bg-white text-center">
+    <section className="mt-12 md:mt-16 py-10 text-center" style={{ background: 'linear-gradient(45deg, #F5F5F5, #00B7EB)' }}>
       <div className="max-w-[1440px] mx-auto px-4 md:px-8">
         <img
           src="images/full-window.png"
           alt="Full Window"
           className="floating-image mx-auto max-w-xs md:max-w-3xl"
+          style={{ boxShadow: '0 0 15px #FF69B4' }}
         />
         <button
           onClick={handleTalk}
           className="mt-6 w-full lg:w-[111px] h-10 bg-gray-200 text-sm md:text-[13px] flex items-center justify-center mx-auto text-black"
+          style={{ background: 'linear-gradient(90deg, #FFD700, #00FF7F)', color: '#FF69B4' }}
         >
           Talk
         </button>
@@ -300,8 +312,8 @@ const AudioSection = () => {
 
 const SocialSection = () => {
   return (
-    <footer className="mt-20 py-10 bg-white text-center">
-      <h2 className="text-xl font-semibold mb-4 text-black">Join Our Community</h2>
+    <footer className="mt-20 py-10 text-center" style={{ background: 'linear-gradient(135deg, #F5F5F5, #FFD700)' }}>
+      <h2 className="text-xl font-semibold mb-4" style={{ color: '#00B7EB' }}>Join Our Community</h2>
       <div className="flex justify-center gap-6">
         <a
           href="https://tiktok.com/@tungtungsahur"
