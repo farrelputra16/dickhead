@@ -82,6 +82,7 @@ function App() {
       <main>
         <Overlay />
         <div className="layout">
+          <BubbleSection />
           <TikTokHeaderSection />
           <HeroSection />
           <AudioSection />
@@ -108,6 +109,9 @@ const Navbar = () => {
           tung tung sahur
         </span>
       </div>
+      <span className="text-sm md:text-base font-semibold hidden lg:block" style={{ color: 'black' }}>
+        CA: Coming Soon
+      </span>
       <button
         className="lg:hidden"
         onClick={() => setIsOpen(!isOpen)}
@@ -121,6 +125,9 @@ const Navbar = () => {
         } lg:flex flex-col lg:flex-row items-center absolute lg:static top-16 left-0 w-full lg:w-auto bg-white lg:bg-transparent shadow-lg lg:shadow-none p-4 lg:p-0`}
         style={{ background: isOpen ? '#FFFFFF' : 'transparent' }}
       >
+        <span className="text-sm md:text-base font-semibold lg:hidden mb-4" style={{ color: 'black' }}>
+          CA: Coming Soon
+        </span>
         <div className="flex justify-center gap-6">
           <a
             href="https://www.tiktok.com/@real.tungsahur?_t=ZN-8wEkcXVf6Oc&_r=1"
@@ -186,9 +193,37 @@ const BubbleChat = () => {
   );
 };
 
-const TikTokHeaderSection = () => {
+const BubbleMap = () => {
+  useEffect(() => {
+    gsap.to(".bubble-map", {
+      y: -20,
+      repeat: -1,
+      yoyo: true,
+      duration: 1.5,
+      ease: "sine.inOut",
+    });
+  }, []);
+
+  return (
+    <div className="bubble-map relative mx-auto" style={{ background: 'linear-gradient(90deg, #00B7EB, #FF69B4)', color: '#FFFFFF' }}>
+      <span className="font-bold">This memecoin is officially backed by the OG tung tung sahur account</span>
+    </div>
+  );
+};
+
+const BubbleSection = () => {
   return (
     <section className="mt-12 md:mt-16 py-10" style={{ background: 'linear-gradient(135deg, #8B5A2B, #FF69B4)' }}>
+      <div className="max-w-[1440px] mx-auto px-4 md:px-8">
+        <BubbleMap />
+      </div>
+    </section>
+  );
+};
+
+const TikTokHeaderSection = () => {
+  return (
+    <section className="py-10" style={{ background: 'linear-gradient(135deg, #8B5A2B, #FF69B4)' }}>
       <div className="max-w-[1440px] mx-auto px-4 md:px-8">
         <div className="flex flex-col items-center gap-6">
           <div className="text-center">
